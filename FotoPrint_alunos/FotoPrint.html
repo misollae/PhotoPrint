@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Projeto 4 PCM ✤ FotoPrint</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="./css/styling.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Waterfall&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+  <script src="./js/FotoPrint_manager.js"></script>
+  <script src="./js/FotoPrint.js"></script>
+  <script src="./js/DrawingObjects.js"></script>
+  <script src="https://kit.fontawesome.com/b9cceb484a.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <section id="section">
+  <div class="title">LD FotoPrint</i></div>
+    <div class="icon"><i class="fas fa-paint-brush"></i></i></div> 
+
+    <!---Primeiro canvas-->
+    <canvas id="canvas" width="1320" height="530">
+      Your browser doesn't recognize the canvas element
+    </canvas>
+
+    <!---Botão slider-->
+    <button class="btn btn-2" id="right-slider-btn" onclick="moveChoiceCanvas();"><i class="fas fa-edit"></i></button>
+
+    <!---Slider-->
+    <div class="container" id="right-slider">
+      <div style="margin-top: 18px; margin-left: 15px;">Choose Item &nbsp<i class="far fa-hand-point-down"></i></div>
+
+    <!---Segundo canvas-->
+      <canvas id="choicecanvas" width="251" height="420">
+        Your browser doesn't recognize the canvas element
+      </canvas>
+
+    <!---Quatro botões edição-->
+      <div style="margin-top: 10px; margin-left: 15px; margin-bottom: 5px;">Other Options &nbsp<i
+          class="fas fa-chevron-circle-down"></i></div>
+      <button class="btnslider" onclick="insertText()">Insert Text &nbsp<i class="fas fa-font"></i></i></button><br>
+
+    <!---Aqui usam-se classes input: 
+        No caso do type file abre o navegador de ficheiros;
+        No caso do type color abre uma janela com espetro de cor;
+        O evento onchange() signinifica que atualizam a qualquer mudança,
+        Value é o valor introduzido, iniciado aqui no caso das cores -->
+      <button class="btnslider">
+        <input id="inserirImagem" type="file" name="imagem" onchange="insertImage()"></input>
+        <label for="inserirImagem">Insert Image &nbsp<i class="fas fa-paperclip"></i></label>    
+      </button>
+
+      <button class="btnslider">
+        <input id="corbg" value="#F8F8FF" type="color" onchange="app.changeBackgroundColor(this.value);"></input>
+        <label for="corbg">Change Background &nbsp<i class="fas fa-palette"></i></label>
+      </button>
+      
+      <button class="btnslider">
+        <input id="cor" value="#FFC0CB" type="color" onchange="app.changeObjectColor(this.value);"></input>
+        <label for="cor">Change Object Color &nbsp<i class="fas fa-eye-dropper"></i></label>
+      </button><br>
+
+
+      
+    </div>
+  </section>
+
+  <section id="buttons">
+    <!--Dois botões abaixo do primeiro canvas-->
+    <button class="btn btn-4" onclick="saveasimage();">
+      Save Image &nbsp<i class="fas fa-save"></i>
+    </button>
+    <button class="btn btn-3" onclick="reset();">Reset Image &nbsp<i class="fas fa-trash"></i></button>
+
+    <!--Botões que aparecem quando um objeto no canavs principal é selecionado-->
+    <div id="editoptions" style="display: none;">
+      <label type="button" onclick="remove();" style = "cursor: pointer;"><i class="fas fa-times-circle"></i></label>
+      <label type="button" onclick="app.updateObjectColor();" style="margin-left: 4px; margin-right: 4px; cursor: pointer;"><i class="fas fa-fill-drip"></i>      </label>
+      <!--Range implica o slider com vários valores, uma vez que não consegue representar números decimais coloca-se
+          de 1 a 40 para representar o intervalo de 0.1 a 4 (transformado para esse intervalo na função chamada), value
+          é o valor inicial, que neste caso começa com scale = 10/10 = 1-->
+      <input type="range" min="1" max="40" value="10" class="slider" id="myRange" oninput="resizeObject(this.value);">
+    </div>
+  </section>
+
+  <section>
+    <script>
+      // Função chamada quando se inicia a janela
+      window.onload = main();
+    </script>
+  </section>
+
+  <footer></footer>
+</body>
+
+</html>

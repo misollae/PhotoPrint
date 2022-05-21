@@ -1,0 +1,192 @@
+body {
+  background-image: url("../imgs/bag.png");
+  background-color: rgba(241, 202, 220, 0.514);
+  background-blend-mode: lighten;
+  background-size: cover;
+  background-repeat: repeat-y;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-family: 'Waterfall', cursive;
+  position: absolute;
+  font-weight: bolder;
+  cursor:default;
+  color: ghostwhite;
+  font-size: 60px;
+  left: 650px;
+  top: 13px;
+  text-align: center;
+}
+.icon {
+  font-family: 'Waterfall', cursive;
+  position: absolute;
+  font-weight: bold;
+  color: ghostwhite;
+  font-size: 30px;
+  left: 900px;
+  top: 37px;
+  text-align: center;
+}
+
+#canvas {
+  position: relative;
+  margin-left: 6%;
+  margin-right: 6%;
+  display: flex;
+  flex-direction: column;
+  background-color: ghostwhite;
+  margin-top: 80px;
+  cursor: crosshair;
+}
+
+#choicecanvas {
+  position: relative;
+  margin-left: 7.5%;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: ghostwhite;
+  cursor: crosshair;
+}
+
+
+
+.btn-3 {
+  position: relative;
+  background-color: #e6b4c9;
+  margin-left:50px;
+}
+.btn-4 {
+  position: relative;
+  background-color: #a1c4fd;
+}
+.btn-2 {
+  position: fixed !important; 
+  top: 308px; 
+  padding-top: 30px !important;
+  padding-bottom: 30px !important;
+  padding-right: 30px !important;
+  padding-left: 10px !important;
+
+  right: -18px;
+  border-right: none !important;
+  background-color: #a1c4fd;
+}
+
+.btnslider {
+  display: inline-block;
+  font-family: 'Mukta', cursive;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #d4b4e6;
+  width: 65%;
+  margin-top: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-weight: bold;
+  border-color: rgb(255, 255, 255);
+  border-width: 20%;
+  text-align: center;
+  color: ghostwhite;
+  border-radius: 12px;
+}
+
+
+.btn {
+  font-family: 'Mukta', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 14px;
+  padding-right: 14px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  border-color: rgb(255, 255, 255);
+  border-width: 20%;
+  text-align: center;
+  color: ghostwhite;
+  border-radius: 12px;
+}
+
+#editoptions {
+  position: absolute;
+  bottom: 100px;
+  left: 112px;
+  font-family: 'Mukta', cursive;
+  font-size: 21px;
+  font-weight: bold;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-weight: bold;
+  text-align: center;
+  color: #a1c4fd;
+}
+
+#cor, #corbg, #inserirImagem
+{
+    width: 0%;
+    height: 0px;
+    width: 0px;
+    visibility: hidden;
+}
+
+#right-slider{
+  font-family: 'Mukta', cursive;
+  font-size: 16px;
+  font-weight: bold;
+  position: fixed;
+  text-align: center;
+  color: ghostwhite;
+  right: -295px;
+  background-color: #a1c4fd;
+  top: 0px;
+  height: 100%;
+  width: 300px;
+  border-color: white;
+  border-width: 12px;
+  border-radius: 12px;
+}
+
+#buttons{
+    display: inline-block;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.slider {
+  position: relative;
+  -webkit-appearance: none; 
+  height: 6px;
+  width: 70px;
+  border-radius: 20px;
+  background-color: #a1c4fd;
+  bottom:4px;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  border-radius: 20px;
+  width: 15px; 
+  height: 15px;
+  background: #a1c4fd;
+  cursor: pointer; 
+}
+
+/*
+body {
+     margin:0;
+     border: none;
+     padding: 0;
+ }*/
+
+/*
+section {
+    position: relative;
+    left: 100px;
+}*/
